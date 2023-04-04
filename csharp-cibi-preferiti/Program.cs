@@ -11,3 +11,10 @@ string[] cibi = {
 
 // Stampa di quanti elementi ci sono in classifica
 Console.WriteLine($"All'interno della classifica sono presenti {cibi.Length} cibi!");
+
+// Stampa degli elementi della classifica dal primo all'ultimo
+//Esempio con il ciclo for
+for ( int i = 0; i < cibi.Length; i++ ) { 
+    
+    Console.WriteLine(cibi[i] );
+}
