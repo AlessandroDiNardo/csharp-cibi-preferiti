@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //inizializzo un array dei cibi preferiti 
+using System.Security.Cryptography;
+
 string[] cibi = {
     "pasta e fagioli",
     "cotoletta",
@@ -46,5 +48,15 @@ Console.WriteLine($"Il cibo in primo posizione è: {cibi.AsQueryable().First()}"
 //Stampa cibo ultimo in classifica
 Console.WriteLine($"Il cibo all`ultimo posizione  è: {cibi.AsQueryable().Last()}");
 
-//Stampa cibo primo in classifica
-Console.WriteLine($"Il cibo alla posizione centrale della classfica è: {cibi[cibi.Length / 2]}");
+//Stampa cibo posizione centrale in classifica
+var cibiPref = cibi.Length;
+if (cibiPref % 2 == 0)
+{
+    var mid = cibiPref / 2;
+    Console.WriteLine($"Il cibo alla posizione centrale della classfica è : {cibi[mid - 1]}");
+} 
+else
+{
+    var mid = cibiPref / 2;
+    Console.WriteLine($"I cibi in posizione centrale della classfica sono : {cibi[mid - 1]}, {cibi[mid]}");
+}
