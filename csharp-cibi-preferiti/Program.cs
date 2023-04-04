@@ -41,7 +41,10 @@ Console.WriteLine("");
 
 
 //Stampa cibo primo in classifica
-Console.WriteLine($"Il cibo in primo posizione è : {cibi[0]}");
+Console.WriteLine($"Il cibo in primo posizione è: {cibi.AsQueryable().First()}");
 
 //Stampa cibo ultimo in classifica
-Console.WriteLine($"Il cibo all`ultimo posizione  è : {cibi[9]}");
+Console.WriteLine($"Il cibo all`ultimo posizione  è: {cibi.AsQueryable().Last()}");
+
+//Stampa cibo primo in classifica
+Console.WriteLine($"Il cibo alla posizione centrale della classfica è: {cibi[cibi.Length / 2]}");
